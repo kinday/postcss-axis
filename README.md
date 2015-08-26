@@ -9,6 +9,8 @@
 .foo {
   margin-x: 10px;
   padding-y: 10px 20px;
+  border-x: 1px solid #f00;
+  border-y-color: #fff;
 }
 ```
 
@@ -19,6 +21,10 @@
   margin-right: 10px;
   padding-top: 10px;
   padding-bottom: 10px;
+  border-left: 1px solid #f00;
+  border-right: 1px solid #f00;
+  border-top-color: #fff;
+  border-bottom-color: #fff;
 }
 ```
 
