@@ -31,7 +31,7 @@
 ## Installation
 
 ```bash
-npm install kinday/postcss-axis
+npm install postcss-axis
 ```
 
 ## Usage
