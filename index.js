@@ -22,7 +22,13 @@ module.exports = postcss.plugin('postcss-axis', function (opts) {
         css.walkDecls(filter, function (decl) {
             var match = decl.prop.match(filter);
             var attrs = getAttrs(match[2], match[1], match[3]);
-            var values = postcss.list.space(decl.value);
+            var values;
+
+            if (match[1] === 'border' && !match[3]) {
+                values = [decl.value];
+            } else {
+                values = postcss.list.space(decl.value);
+            }
 
             if ( values.length === 1 ) values[1] = values[0];
 

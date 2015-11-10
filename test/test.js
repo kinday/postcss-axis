@@ -18,14 +18,13 @@ describe('postcss-axis', function () {
     describe('border', function () {
 
         it('sets borders', function (done) {
-            var input = 'a{ border-x: 10px 20px; }';
-            var output = 'a{ border-left: 10px; border-right: 20px; }';
-            test(input, output, {}, done);
-        });
-
-        it('sets borders by one value', function (done) {
-            var input = 'a{ border-x: 10px; }';
-            var output = 'a{ border-left: 10px; border-right: 10px; }';
+            var input = 'a{ border-x: 10px solid #000; }';
+            var output = [
+                'a{',
+                'border-left: 10px solid #000;',
+                'border-right: 10px solid #000;',
+                '}'
+            ].join(' ');
             test(input, output, {}, done);
         });
 
