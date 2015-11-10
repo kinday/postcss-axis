@@ -40,4 +40,16 @@ npm install postcss-axis
 postcss([ require('postcss-axis') ])
 ```
 
+### Options
+
+#### `trbl`
+Type: `Boolean`
+Default: `false`
+
+Swaps `left` and `right` values in shorthands according to [TRBL] model.
+
+[TRBL]: https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties
+
+---
+
 See [PostCSS] docs for examples for your environment.

@@ -32,6 +32,8 @@ module.exports = postcss.plugin('postcss-axis', function (opts) {
 
             if ( values.length === 1 ) values[1] = values[0];
 
+            if (opts.trbl) values = [values[1], values[0]];
+
             decl.cloneBefore({ prop: attrs[0], value: values[0] });
             decl.cloneBefore({ prop: attrs[1], value: values[1] });
 
