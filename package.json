@@ -1,6 +1,6 @@
 {
   "name": "postcss-axis",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "PostCSS plugin which adds shorthands for opposite properties",
   "keywords": [
     "postcss",
