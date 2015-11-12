@@ -134,10 +134,20 @@ describe('postcss-axis', function () {
 
     describe('options', function () {
 
-        it('swaps left and right when `tbrl` is set', function (done) {
-            var input = 'a{ padding-x: 20px 10px; }';
-            var output = 'a{ padding-left: 10px; padding-right: 20px; }';
-            test(input, output, { trbl: true }, done);
+        describe('trbl', function () {
+
+            it('swaps left and right', function (done) {
+                var input = 'a{ padding-x: 20px 10px; }';
+                var output = 'a{ padding-left: 10px; padding-right: 20px; }';
+                test(input, output, { trbl: true }, done);
+            });
+
+            it('doesn’t swap top and bottom', function (done) {
+                var input = 'a{ padding-y: 10px 20px; }';
+                var output = 'a{ padding-top: 10px; padding-bottom: 20px; }';
+                test(input, output, { trbl: true }, done);
+            });
+
         });
 
     });
