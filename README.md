@@ -20,7 +20,7 @@
   margin-left: 10px;
   margin-right: 10px;
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
   border-left: 1px solid #f00;
   border-right: 1px solid #f00;
   border-top-color: #fff;
